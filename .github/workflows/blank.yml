@@ -31,7 +31,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Teraform Init and Validate
         run: |
-          terraform init,
+          terraform init
           terraform validate
 
       # Runs a single command using the runners shell
