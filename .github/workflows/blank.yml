@@ -57,3 +57,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Terraform Plan
         run: terraform plan -out plan.out
+
+       # Runs a single command using the runners shell
+      - name: Terraform Apply
+        run: terraform apply plan.out
