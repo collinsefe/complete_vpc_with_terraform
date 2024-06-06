@@ -2,11 +2,21 @@ module "vpc_example_simple" {
   source  = "terraform-aws-modules/vpc/aws//examples/simple"
   #name = "simple-example"
   version = "5.8.1"
+  tags = var.tags
 }
 
 resource "aws_s3_bucket" "this" {
   bucket = "thisis-me-doing-it-freestyle-20240606"
   force_destroy = true
+}
+
+
+
+variable "tags" {
+
+ Name: "Collins Orighose"
+ Project: "Supando"
+
 }
 
 /*
