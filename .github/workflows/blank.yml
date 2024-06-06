@@ -27,12 +27,13 @@ jobs:
       - name: Terraform format
         run: terraform fmt -recursive
 
-     # Runs a single command using the runners shell
-      - name: Terraform validate
-        run: terraform validate
 
       # Runs a set of commands using the runners shell
-      - name: Tearrform Init and Plan
+      - name: Teraform Init and Validate
         run: |
           terraform init,
-          terraform plan -out plan.out
+          terraform validate
+
+      # Runs a single command using the runners shell
+      - name: Terraform Plan
+        run: terraform plan -out plan.out
