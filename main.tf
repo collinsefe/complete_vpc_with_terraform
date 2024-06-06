@@ -1,5 +1,5 @@
 module "vpc_example_simple" {
-  source  = "https://github.com/terraform-aws-modules/terraform-aws-vpc.git"
+  source  = "git@github.com:terraform-aws-modules/terraform-aws-vpc.git"
   name = "simple-example"
   # version = "5.8.1"
 }
