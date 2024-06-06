@@ -8,6 +8,7 @@ module "vpc_example_simple" {
 resource "aws_s3_bucket" "this" {
   bucket = "thisis-me-doing-it-freestyle-20240606"
   force_destroy = true
+  tags = var.tags
 }
 
 
