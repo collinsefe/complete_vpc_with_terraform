@@ -15,8 +15,8 @@ resource "aws_s3_bucket" "this" {
 
 variable "tags" {
 
- Name: "Collins Orighose"
- Project: "Supando"
+ Name = "Collins Orighose"
+ Project = "Supando"
 
 }
 
