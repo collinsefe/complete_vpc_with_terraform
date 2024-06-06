@@ -4,7 +4,7 @@ module "vpc_example_simple" {
   version = "5.8.1"
 }
 
-resource "aws_s3_bucket "this" {
+resource "aws_s3_bucket" "this" {
   bucket = "thisis-me-doing-it-freestyle-20240606"
   force_destroy = true
 }
