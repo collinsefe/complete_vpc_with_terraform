@@ -61,3 +61,10 @@ jobs:
        # Runs a single command using the runners shell
       - name: Terraform Apply
         run: terraform apply plan.out
+
+      # Runs a single command using the runners shell
+      - name: Terraform Destroy
+        run: |
+          sleep 300
+          terraform plan -destroy -out plan.out
+          terraform apply plan.out
