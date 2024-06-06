@@ -1,7 +1,7 @@
 module "vpc_example_simple" {
-  source  = "terraform-aws-modules/terraform-aws-vpc"
+  source  = "terraform-aws-modules/vpc/aws//examples/simple"
   name = "simple-example"
-  # version = "5.8.1"
+  version = "5.8.1"
 }
 
 resource "aws_s3_bucket" "this" {
