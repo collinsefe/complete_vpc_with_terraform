@@ -1,5 +1,5 @@
 module "vpc_example_simple" {
-  source  = "git@github.com:terraform-aws-modules/terraform-aws-vpc.git"
+  source  = "terraform-aws-modules/terraform-aws-vpc"
   name = "simple-example"
   # version = "5.8.1"
 }
@@ -7,15 +7,6 @@ module "vpc_example_simple" {
 resource "aws_s3_bucket" "this" {
   bucket = "thisis-me-doing-it-freestyle-20240606"
   force_destroy = true
-}
-
-
-
-variable "tags" {
-
- Name = "Collins Orighose"
- Project = "Supando"
-
 }
 
 /*
