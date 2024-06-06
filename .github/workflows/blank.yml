@@ -9,8 +9,8 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-# env:
-#   AWS_REGION : "eu-west-2" #Change to reflect your Region
+env:
+  AWS_REGION : eu-west-2 #Change to reflect your Region
   
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::684361860346:role/GitHub-OIDC-role #<arn:aws:iam::111122223333:role/GitHubAction-AssumeRoleWithAction> #change to reflect your IAM role’s ARN
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          aws-region: eu-west-2
+          aws-region: ${{ env.AWS_REGION }}
      
       # Hello from AWS: WhoAmI
       - name: Sts GetCallerIdentity
